@@ -1,0 +1,27 @@
+/* grid 12 colunas + breakpoints */
+
+/* Grid 12 colunas */
+.row{display:grid; grid-template-columns:repeat(12, 1fr); gap:var(--space-5)}
+/* utilitário de coluna: .col-12, .col-6, etc. */
+[class^="col-"]{grid-column: span 12}
+@media (min-width:768px){
+  .col-6{grid-column: span 6}
+  .col-4{grid-column: span 4}
+  .col-3{grid-column: span 3}
+  .col-8{grid-column: span 8}
+  .col-12{grid-column: span 12}
+}
+/* larguras de container por breakpoint */
+@media (min-width:480px){ .container{max-width: 520px} }
+@media (min-width:768px){ .container{max-width: 740px} }
+@media (min-width:1024px){ .container{max-width: 980px} }
+@media (min-width:1280px){ .container{max-width: 1200px} }
+/* layouts específicos */
+.hero{padding-block:var(--space-7)}
+.grid-cards{display:grid; gap:var(--space-5)}
+@media (min-width:768px){ .grid-cards{grid-template-columns:repeat(2,1fr)} }
+@media (min-width:1280px){ .grid-cards{grid-template-columns:repeat(3,1fr)} }
+
+.hero {margin-block-start: 16px; margin-block-end: 24px; display: block; text-align: center;}
+
+.hero img {width: 100%; height: auto; display: block; border-radius: 8px;}

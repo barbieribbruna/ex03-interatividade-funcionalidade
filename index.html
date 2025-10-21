@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ONG Rede do Bem</title>
+  <meta name="description" content="Rede do Bem — transparência, voluntariado e projetos de impacto social.">
+  <meta property="og:title" content="ONG Rede do Bem">
+  <meta property="og:description" content="Transparência, voluntariado e projetos de impacto social.">
+  <meta property="og:type" content="website">
+
+  <!-- Ícone -->
+  <link rel="icon" href="/assets/img/logo.svg">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/forms.css">
+  <link rel="stylesheet" href="/css/utilities.css">
+</head>
+<body>
+  <a class="skip" href="#app">Ir para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="/" data-link class="nav-brand" aria-label="Página inicial">
+        <picture>
+          <source srcset="/assets/img/logo.avif" type="image/avif">
+          <source srcset="/assets/img/logo.webp" type="image/webp">
+          <img src="/assets/img/logo.svg" alt="Logo da ONG Rede do Bem" width="48" height="48">
+        </picture>
+        <strong>ONG Rede do Bem</strong>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" fill="none"/>
+        </svg>
+        Menu
+      </button>
+
+      <nav id="menu" class="nav-menu" aria-label="Principal">
+        <a href="/" data-link>Início</a>
+        <a href="/projetos" data-link>Projetos</a>
+        <a href="/cadastro" data-link>Cadastro</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO DINÂMICO -->
+  <main id="app" class="container" aria-live="polite"></main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="ano">2025</span> ONG Rede do Bem — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JS da SPA -->
+  <script type="module" src="/js/app.js"></script>
+  <noscript>Ative o JavaScript para navegar pelo site.</noscript>
+</body>
+</html>

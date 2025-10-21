@@ -1,0 +1,30 @@
+/* menu responsivo + dropdown */
+
+header{background:var(--white); border-bottom:1px solid var(--neutral-200)}
+.navbar{display:flex; align-items:center; gap:var(--space-5); padding:var(--space-4) 0}
+.nav-brand{display:flex; align-items:center; gap:.75rem}
+.nav-toggle{display:inline-flex; gap:.5rem; align-items:center; padding:.5rem .75rem; border:1px solid var(--neutral-300); background:var(--white); border-radius:.5rem}
+.nav-toggle svg{width:22px;height:22px}
+.nav-menu{display:none; flex-direction:column; gap:.5rem; padding:.75rem 0}
+.nav-menu a{padding:.5rem .75rem; border-radius:.5rem}
+.nav-menu a[aria-current="page"]{background:var(--neutral-100)}
+/* dropdown */
+.nav-item{position:relative}
+.nav-item > button{all:unset; cursor:pointer; padding:.5rem .75rem; border-radius:.5rem}
+.submenu{position:absolute; inset-block-start:calc(100% + .25rem); inset-inline-start:0;
+  background:var(--white); border:1px solid var(--neutral-200); border-radius:.5rem; padding:.5rem;
+  display:none; min-width:220px; box-shadow:var(--shadow-sm)}
+.nav-item:focus-within .submenu, .nav-item:hover .submenu{display:block}
+
+/* ≥ md: menu horizontal */
+@media (min-width:768px){
+  .nav-toggle{display:none}
+  .nav-menu{display:flex; flex-direction:row; gap:1rem}
+  .submenu{inset-inline-start:0}
+}
+
+/* classe JS p/ abrir no mobile */
+.is-open .nav-menu{display:flex}
+
+.nav-menu a.is-active { font-weight: 700; text-decoration: underline; }
+header.is-open #menu { display: block; } /* padrão mobile */

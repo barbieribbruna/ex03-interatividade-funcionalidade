@@ -1,0 +1,23 @@
+/* reset + tipografia */
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font: 400 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color:var(--neutral-900); background:var(--white);
+}
+img,video{max-width:100%; height:auto; display:block}
+h1{font-size:var(--font-700); margin:.5rem 0}
+h2{font-size:var(--font-600); margin:.5rem 0}
+h3{font-size:var(--font-500); margin:.5rem 0}
+p,ul,ol{margin:.5rem 0 1rem}
+a{color:var(--primary-600); text-decoration:none}
+a:hover{text-decoration:underline}
+.container{width:min(1200px, 100% - 2rem); margin-inline:auto}
+.skip{position:absolute; inset-block-start:-9999px}
+.skip:focus{inset-block-start:.5rem; inset-inline-start:.5rem; background:var(--white); padding:.5rem 1rem; border:1px solid var(--neutral-300)}
+.sr-only{position:absolute!important; width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+figure, picture {margin: 0; padding: 0;}
+
+img, video {max-width: 100%; height: auto; display: block;}

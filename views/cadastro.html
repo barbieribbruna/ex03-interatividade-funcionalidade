@@ -1,0 +1,84 @@
+<section aria-labelledby="titulo-cadastro" class="cadastro">
+  <h1 id="titulo-cadastro">Cadastro</h1>
+  <p>Preencha seus dados para se tornar <strong>voluntário</strong> ou <strong>doador</strong>. Campos marcados com * são obrigatórios.</p>
+
+  <form id="formCadastro" novalidate>
+    <!-- Identificação -->
+    <fieldset>
+      <legend>Identificação</legend>
+
+      <label for="nome">Nome completo*</label>
+      <input id="nome" name="nome" type="text" autocomplete="name" required minlength="3" maxlength="120" placeholder="Seu nome completo">
+
+      <label for="email">E-mail*</label>
+      <input id="email" name="email" type="email" autocomplete="email" required placeholder="seu@email.com">
+
+      <label for="cpf">CPF*</label>
+      <input id="cpf" name="cpf" inputmode="numeric" required
+             placeholder="000.000.000-00"
+             pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$"
+             title="Use o formato 000.000.000-00">
+
+      <label for="telefone">Telefone*</label>
+      <input id="telefone" name="telefone" inputmode="tel" autocomplete="tel" required
+             placeholder="(00) 00000-0000"
+             pattern="^\(\d{2}\)\s?\d{4,5}-\d{4}$"
+             title="Use o formato (11) 99999-9999">
+
+      <label for="nascimento">Data de Nascimento*</label>
+      <input id="nascimento" name="nascimento" type="date" required>
+    </fieldset>
+
+    <!-- Endereço -->
+    <fieldset>
+      <legend>Endereço</legend>
+
+      <label for="endereco">Endereço*</label>
+      <input id="endereco" name="endereco" type="text" required placeholder="Rua, número e complemento" autocomplete="address-line1">
+
+      <label for="cep">CEP*</label>
+      <input id="cep" name="cep" inputmode="numeric" required placeholder="00000-000"
+             pattern="^\d{5}-\d{3}$" title="Use o formato 00000-000" autocomplete="postal-code">
+
+      <label for="cidade">Cidade*</label>
+      <input id="cidade" name="cidade" type="text" required autocomplete="address-level2">
+
+      <label for="estado">Estado (UF)*</label>
+      <select id="estado" name="estado" required autocomplete="address-level1">
+        <option value="" selected disabled>Selecione</option>
+        <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+        <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+        <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+        <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+        <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+        <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+        <option>SP</option><option>SE</option><option>TO</option>
+      </select>
+    </fieldset>
+
+    <!-- Preferências -->
+    <fieldset>
+      <legend>Preferências</legend>
+
+      <label for="perfil">Perfil*</label>
+      <select id="perfil" name="perfil" required>
+        <option value="" disabled selected>Selecione</option>
+        <option value="voluntario">Voluntário</option>
+        <option value="doador">Doador/Apoiador</option>
+      </select>
+
+      <label for="mensagem">Mensagem (opcional)</label>
+      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte-nos sobre suas motivações."></textarea>
+
+      <label class="checkbox-lgpd">
+        <input type="checkbox" name="termos" required>
+        Confirmo que li e aceito a <a href="#" target="_blank" rel="noopener">Política de Privacidade</a>. *
+      </label>
+    </fieldset>
+
+    <p class="info-lgpd">🔒 Seus dados são protegidos conforme a Lei Geral de Proteção de Dados (LGPD). Utilizamos suas informações apenas para as finalidades informadas e com a devida segurança.</p>
+
+    <button type="submit">Enviar cadastro</button>
+    <p role="status" aria-live="polite" id="status"></p>
+  </form>
+</section>
